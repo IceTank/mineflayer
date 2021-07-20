@@ -628,6 +628,7 @@ export class Chest extends (EventEmitter as new () => TypedEmitter<StorageEvents
     itemType: number,
     metadata: number | null,
     count: number | null,
+    waitBetweenClicks?: number,
     cb?: (err?: Error) => void
   ): Promise<void>;
 
@@ -635,6 +636,7 @@ export class Chest extends (EventEmitter as new () => TypedEmitter<StorageEvents
     itemType: number,
     metadata: number | null,
     count: number | null,
+    waitBetweenClicks?: number,
     cb?: (err?: Error) => void
   ): Promise<void>;
 
