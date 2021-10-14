@@ -273,20 +273,23 @@ export interface Bot extends TypedEmitter<BotEvents> {
   equip: (
     item: Item | number,
     destination: EquipmentDestination | null,
+    waitBetweenClicks?: number,
     callback?: (error?: Error) => void
   ) => Promise<void>
 
   unequip: (
     destination: EquipmentDestination | null,
+    waitBetweenClicks?: number,
     callback?: () => void
   ) => Promise<void>
 
-  tossStack: (item: Item, callback?: (error?: Error) => void) => Promise<void>
+  tossStack: (item: Item, waitBetweenClicks?: number, callback?: (error?: Error) => void) => Promise<void>
 
   toss: (
     itemType: number,
     metadata: number | null,
     count: number | null,
+    waitBetweenClicks?: number,
     callback?: (err?: Error) => void
   ) => Promise<void>
 
