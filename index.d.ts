@@ -570,6 +570,7 @@ export interface TransferOptions {
   sourceEnd: number
   destStart: number
   destEnd: number
+  waitBetweenClicks?: number
 }
 
 export interface creativeMethods {
